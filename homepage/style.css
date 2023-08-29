@@ -1,0 +1,15 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.grid-container {
+	display: grid;
+	min-height: 100vh; /* Ensure the container takes at least the viewport height */
+	background-color: lightgray;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	justify-content: space-between;
+	align-content: space-between;
+	text-align: center;
+}
