@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Black+Ops+One&display=swap");
+
+* {
+	font-family: "Anton", sans-serif;
+	font-family: "Black Ops One";
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -31,7 +38,10 @@ body {
 }
 
 .gameOptions {
+	display: flex;
+	flex-direction: column;
 	grid-column: 2/3;
+	justify-content: center;
 }
 
 .chatBot {
@@ -46,6 +56,10 @@ body {
 	transform-style: preserve-3d;
 	transition: transform 0.5s;
 	cursor: pointer;
+}
+
+.card.flipped {
+	transform: rotateY(180deg);
 }
 
 .card-front,
