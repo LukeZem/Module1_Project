@@ -8,30 +8,40 @@ body {
 .grid-container {
 	flex: auto;
 	display: grid;
-	justify-content: space-between;
-	align-content: space-between;
+	justify-content: space-between !important;
+	align-content: space-between !important;
 	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
 	gap: 5px;
 	background-color: antiquewhite;
 	padding: 20px;
 }
 
-.grid-container * {
+/* .grid-container * {
 	border: 2px solid black;
-}
+} */
 
 #nav-bar {
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 4fr;
 	justify-content: center;
 	align-items: center;
 	grid-column: span 4;
 	background: darkolivegreen;
 }
 
+.gameOptions {
+	grid-column: 2/3;
+}
+
+.chatBot {
+	padding: 10px;
+	grid-column: 1/2;
+}
+
 .card {
 	width: 70%;
 	height: 180px;
-	position: relative;
 	perspective: 1000px;
 	transform-style: preserve-3d;
 	transition: transform 0.5s;
