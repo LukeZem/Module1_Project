@@ -1,26 +1,58 @@
 const inputElement = document.querySelector("#userInput");
 const cards = document.querySelectorAll(".card");
 const chatPage = document.querySelector(".chat-page");
-const clearCardsButton = document.getElementById("clearCardsButton");
+const clearCardsButton = document.getElementById("clear-Cards-Button");
 
 let userName = "User";
 const topicChoice = ["psychology", "Cybersecurity", "Computer Science"];
 const topicBotResponses = ["Psychology is it!", "Alright, just don't hack me!", "Computer what???"];
 const userInputs = [
-	["how are you", "how is life", "how are things"], //0
-	["hi", "hey", "hello", "good morning", "good afternoon"], //1
-	["what are you doing", "what is going on", "what is up"], //2
-	["who are you", "are you human", "are you bot", "are you human or bot"], //3
-	["are you self aware"], //4
+	["how are you", "how is life", "how are things", "what's up", "how's it going"], //0
+	["hi", "hey", "hello", "good morning", "good afternoon", "hey chad"], //1
+	["what are you doing", "what is going on", "what is up", "tell me a joke", "give me some advice"], //2
+	["who are you", "are you human", "are you bot", "are you human or bot", "tell me about yourself"], //3
+	["are you self aware", "do you have feelings", "can you think", "what is your purpose", "are you alive"], //4
 ];
 const botResponses = [
-	["Fine... how are you?", "Pretty well, how are you?", "Fantastic, how are you?"], //0
-	["Hello!", "Hi!", "Hey!", "Hi there!", "Howdy"], //1
-	["Nothing much", "About to go to sleep", "Can you guess?", "I don't know actually"], //2
-	["I am just a bot", "I am a bot. What are you?"], //3
-	["define self aware..."], //4
+	["Fine... how are you?", "Pretty well, how are you?", "Fantastic, how are you?", "I'm good, thanks for asking!"], //0
+	["Hello!", "Hi!", "Hey!", "Hi there!", "Howdy", "Hey, Chad here!"], //1
+	[
+		"Nothing much",
+		"About to go to sleep",
+		"Can you guess?",
+		"I don't know actually",
+		"Why did the computer keep freezing? It left its Windows open!",
+	], //2
+	[
+		"I am just a bot",
+		"I am a bot. What are you?",
+		"I'm a computer program designed to chat with you.",
+		"I'm not ChatGPT, I'm your unfriendly AI assistant.",
+	], //3
+	[
+		"define self aware...",
+		"give me hint",
+		"I'm not self-aware, I'm just a collection of code and data.",
+		"I don't have feelings or consciousness, but I'm here to assist you!",
+	], //4
 ];
-const botDefaults = [];
+const funnyResponses = [
+	"Why not?",
+	"404: Humor not found.",
+	"¯\\_(ツ)_/¯",
+	"It's not you, it's me.",
+	"Ask me later, I'm napping.",
+	"Error 418: I'm a teapot.",
+	"That's classified information.",
+	"I'm on strike!",
+	"I'm as useful as a screen door on a submarine.",
+	"You're in a maze of twisty passages, all alike.",
+	"I'm as lost as a cat in a maze of string.",
+	"I'm not the droid you're looking for.",
+	"I'm about as helpful as a chocolate teapot.",
+	"You've reached the end of the internet.",
+	"I'm so confused, I'm thinking of becoming a fork.",
+];
 const botMemory = [[], []];
 
 //flipping the flash card when clicked
@@ -71,42 +103,40 @@ const output = (input) => {
 
 	//if user just wants to talk to the BOT
 	if (!input.includes(":")) {
-		let text = input.toLowerCase().replace(/[^\w\s\d]/gi, "");
-		text = text
-			.replace(/ a /g, " ")
-			.replace(/whats/g, "What is")
-			.replace(/please /g, "")
-			.replace(/ please/g, "");
-		//need to add more delimiter regex...
-
-		// implementation of chatbot response...
-		addToChatBox(text, compare(userInputs, botResponses, text));
-
-		//bot memory
+		addToChatBox(compare(userInputs, botResponses, funnyResponses, input));
 	}
 };
 
-/**
- *
- * @param {Array} userInputs
- * @param {Array} botResponses
- * @param {user input} string
- * @returns response // default response if necessary
- */
-const compare = (userInputs, botResponses, string) => {
-	let response;
+const processInput = (input) => {
+	return input
+		.toLowerCase()
+		.replace(/[^\w\s\d]/gi, "") //remove all non standard chars
+		.replace(/\ba\b/g, " ") //removes the a if surrounded by words
+		.replace(/\bwhats\b/g, "what is")
+		.replace(/\bplease\b/g, " ") //removes please with word boundaries
+		.replace(/\bcan\b/g, " ") //removes can with word boundaries
+		.trim();
+};
+
+const compare = (userInputs, botResponses, funnyResponses, input) => {
+	let cleanedInput = processInput(input);
+	if (cleanedInput.includes("hint")) {
+		return "NEVER";
+	}
+
 	for (let i = 0; i < userInputs.length; i++) {
 		for (let j = 0; j <= userInputs[i].length - 1; j++) {
-			if (userInputs[i][j] === string) {
+			if (userInputs[i][j] === cleanedInput) {
 				response = botResponses[i];
 				response = response[Math.floor(Math.random() * response.length)];
+				return response;
 			}
 		}
 	}
-	return response || `Sorry I don't understand`; // default message if no match found..
+	return funnyResponses[Math.floor(Math.random() * funnyResponses.length)]; // default message if no match found..
 };
 
-const addToChatBox = (input, response) => {
+const addToChatBox = (response) => {
 	const messagesDiv = document.querySelector("#messages");
 	messagesDiv.innerHTML = `<span class="response">${response}</span>`;
 	// <span class="userText">${input}</span>
@@ -155,7 +185,7 @@ const populateCardsFromLocalStorage = () => {
 	}
 };
 
-// Call the function to populate cards when the page is loaded
+// Calling the function to populate cards when the page is loaded
 window.addEventListener("load", populateCardsFromLocalStorage);
 
 clearCardsButton.addEventListener("click", () => {
@@ -164,7 +194,7 @@ clearCardsButton.addEventListener("click", () => {
 		localStorage.removeItem(`card${i}_term`);
 		localStorage.removeItem(`card${i}_definition`);
 
-		// Optionally, you can reset the card content to its default state
+		// reset the card content to its default state
 		const card = document.getElementById(i);
 		card.children[0].textContent = "Front Content";
 		card.children[1].textContent = "Back Content";

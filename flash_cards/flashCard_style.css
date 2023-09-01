@@ -47,13 +47,25 @@ body {
 }
 
 #clear-Cards-Button {
+	color: white;
+	background-color: #e74c3c;
+	cursor: pointer;
 	width: fit-content;
 }
 
-#game-title {
+.game-title {
 	position: absolute;
 	top: 0;
 	padding-top: 12px;
+}
+
+#instruct {
+	margin: 0;
+	margin-top: 1em;
+}
+
+.list-group {
+	margin-top: 0;
 }
 
 #chatBot {
@@ -73,6 +85,7 @@ body {
 	cursor: pointer;
 	margin-left: auto;
 	margin-right: auto;
+	box-shadow: 5px 5px;
 }
 
 .card.flipped {
@@ -161,7 +174,4 @@ body {
 
 .response {
 	margin-right: auto;
-}
-
-.userText {
 }

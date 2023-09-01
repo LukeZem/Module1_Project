@@ -11,16 +11,26 @@
 		<div class="grid-container">
 			<nav id="nav-bar">
 				<div class="gameOptions">
-					<h1 id="game-title">Flashy Flash Cards</h1>
-					<h3>Please Read Instructions</h3>
+					<h1 class="game-title">Flashy Flash Cards</h1>
+					<br />
+					<h3 id="instruct">Please Read Instructions</h3>
 					<!-- <h1>Flashy Flash Cards</h1> -->
-					<ol type="1">
-						<li>Chad is not that smart so...</li>
-						<li>Tell him "add term: ...</li>
-						<li>then "add definition: ...</li>
-						<li>there are 12 cards, have fun studying!</li>
+					<ol class="list-group" type="1" style="color: lightgray">
+						<li style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Talk to chad to fill out cards</li>
+						<li style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+							Tell him "add term: ..." to fill out the front
+						</li>
+						<li style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+							Tell him "add definition: ..." to fill out the back
+						</li>
+						<li style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+							Chad will start with the first card then move on!
+						</li>
+						<li style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+							Click cards to flip them! But be warned Chad in very Unhelpful!!
+						</li>
 					</ol>
-					<button id="clear-Cards-Button">Clear Cards</button>
+					<button id="clear-Cards-Button">Reset Cards</button>
 				</div>
 
 				<h1 id="chad">The Unhelpful Chatbot Chad :p</h1>
@@ -29,10 +39,8 @@
 					<!-- Message container -->
 					<div class="msg-page">
 						<!-- messages -->
-						<div id="messages"></div>
+						<div id="messages">Hey! I'm Chad. Let me help you fill out your flash cards! Or we can just chat I guess...</div>
 					</div>
-
-					<!-- input field -->
 
 					<input type="text" id="userInput" placeholder="Write message..." />
 				</div>
