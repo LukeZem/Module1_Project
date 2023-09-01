@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>Flash Cards</title>
 		<link rel="stylesheet" href="././flashCard_style.css" />
 		<script src="./flashCard_script.js" defer></script>
 	</head>
@@ -11,17 +11,38 @@
 		<div class="grid-container">
 			<nav id="nav-bar">
 				<div class="gameOptions">
-					<h1>Flashy Flash Cards</h1>
-					<ul>
-						<li>Computer Science</li>
-						<li>Cybersecurity</li>
-						<li>Psychology</li>
-					</ul>
+					<h1 id="game-title">Flashy Flash Cards</h1>
+					<h3>Please Read Instructions</h3>
+					<!-- <h1>Flashy Flash Cards</h1> -->
+					<ol type="1">
+						<li>Chad is not that smart so...</li>
+						<li>Tell him "add term: ...</li>
+						<li>then "add definition: ...</li>
+						<li>there are 12 cards, have fun studying!</li>
+					</ol>
+					<button id="clear-Cards-Button">Clear Cards</button>
 				</div>
-				<div class="chatBot">
-					<input id="userInput" placeholder="Write something..." />
+
+				<h1 id="chad">The Unhelpful Chatbot Chad :p</h1>
+				<!-- chat-page -->
+				<div class="chat-page">
+					<!-- Message container -->
+					<div class="msg-page">
+						<!-- messages -->
+						<div id="messages"></div>
+					</div>
+
+					<!-- input field -->
+
+					<input type="text" id="userInput" placeholder="Write message..." />
 				</div>
+				<!-- end of chat box -->
+				<!-- <input id="userInput" placeholder="Write something..." /> -->
 			</nav>
+			<div id="0" class="card">
+				<div class="card-front">Front Content</div>
+				<div class="card-back">Back Content</div>
+			</div>
 			<div id="1" class="card">
 				<div class="card-front">Front Content</div>
 				<div class="card-back">Back Content</div>
@@ -66,11 +87,6 @@
 				<div class="card-front">Front Content</div>
 				<div class="card-back">Back Content</div>
 			</div>
-			<div id="12" class="card">
-				<div class="card-front">Front Content</div>
-				<div class="card-back">Back Content</div>
-			</div>
 		</div>
-		<footer id="footer"></footer>
 	</body>
 </html>

@@ -9,7 +9,7 @@ body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	max-height: 100vh;
+	min-height: 100vh;
 }
 
 .grid-container {
@@ -22,6 +22,7 @@ body {
 	gap: 5px;
 	background-color: antiquewhite;
 	padding: 20px;
+	min-height: 100vh;
 }
 
 /* .grid-container * {
@@ -30,7 +31,8 @@ body {
 
 #nav-bar {
 	display: grid;
-	grid-template-columns: 1fr 4fr;
+	grid-template-columns: 4fr 3fr;
+	grid-template-rows: 50px 1fr;
 	justify-content: center;
 	align-items: center;
 	grid-column: span 4;
@@ -41,12 +43,25 @@ body {
 	display: flex;
 	flex-direction: column;
 	grid-column: 2/3;
-	justify-content: center;
+	grid-row: span 2;
 }
 
-.chatBot {
-	padding: 10px;
-	grid-column: 1/2;
+#clear-Cards-Button {
+	width: fit-content;
+}
+
+#game-title {
+	position: absolute;
+	top: 0;
+	padding-top: 12px;
+}
+
+#chatBot {
+	grid-row: span 2;
+}
+
+#chad {
+	grid-row: 1/2;
 }
 
 .card {
@@ -56,6 +71,8 @@ body {
 	transform-style: preserve-3d;
 	transition: transform 0.5s;
 	cursor: pointer;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .card.flipped {
@@ -81,13 +98,70 @@ body {
 	background-color: #3498db;
 }
 
+.inputFront {
+	min-width: 90%;
+	min-height: 20%;
+}
+
 .card-back {
 	background-color: #e74c3c;
 	transform: rotateY(180deg);
 }
 
+.inputBack {
+	min-width: 98%;
+	min-height: 50%;
+}
+
+#messages {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 0;
+}
+
 #footer {
-	flex-shrink: -10;
+	flex: 1;
 	min-height: 20vh;
-	background: #e74c3c;
+	background: black;
+}
+
+/* chat box */
+.chat-page {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	grid-column: 1/2;
+	letter-spacing: 0.5px;
+	background-color: rgba(245, 245, 245, 0.726);
+	height: 90%;
+	width: 90%;
+	position: relative;
+	margin-left: 8px;
+	border-bottom-right-radius: 20px;
+}
+
+#userInput {
+	/* border: none !important; */
+	border-radius: 20px !important;
+	height: 25px;
+	padding: 0.375rem 0.75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #000000;
+	background-color: #ffffff54;
+	background-clip: padding-box;
+	margin-left: auto;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding-bottom: -10px;
+}
+
+.response {
+	margin-right: auto;
+}
+
+.userText {
 }
