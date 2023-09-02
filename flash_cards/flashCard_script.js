@@ -37,19 +37,14 @@ const botResponses = [
 	], //4
 ];
 const funnyResponses = [
-	"Why not?",
 	"404: Humor not found.",
 	"¯\\_(ツ)_/¯",
 	"It's not you, it's me.",
 	"Ask me later, I'm napping.",
 	"Error 418: I'm a teapot.",
-	"That's classified information.",
+	"That's classified",
 	"I'm on strike!",
-	"I'm as useful as a screen door on a submarine.",
-	"You're in a maze of twisty passages, all alike.",
-	"I'm as lost as a cat in a maze of string.",
 	"I'm not the droid you're looking for.",
-	"I'm about as helpful as a chocolate teapot.",
 	"You've reached the end of the internet.",
 	"I'm so confused, I'm thinking of becoming a fork.",
 ];
@@ -121,7 +116,7 @@ const processInput = (input) => {
 const compare = (userInputs, botResponses, funnyResponses, input) => {
 	let cleanedInput = processInput(input);
 	if (cleanedInput.includes("hint")) {
-		return "NEVER";
+		return "LOL";
 	}
 
 	for (let i = 0; i < userInputs.length; i++) {
@@ -196,7 +191,7 @@ clearCardsButton.addEventListener("click", () => {
 
 		// reset the card content to its default state
 		const card = document.getElementById(i);
-		card.children[0].textContent = "Front Content";
-		card.children[1].textContent = "Back Content";
+		card.children[0].textContent = "Term";
+		card.children[1].textContent = "Definition";
 	}
 });
