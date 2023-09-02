@@ -48,7 +48,7 @@ const funnyResponses = [
 	"You've reached the end of the internet.",
 	"I'm so confused, I'm thinking of becoming a fork.",
 ];
-const botMemory = [[], []];
+const botMemory = {}; //remember term:definitions use Key:value of JS object so the bot can provide hints
 
 //flipping the flash card when clicked
 let prevCardIndex; //keep track of previous card so it can be unflipped when next card is clicked
@@ -146,6 +146,9 @@ let cardCount = 0;
 let frontSet = false;
 let backSet = false;
 const addToFrontCard = (term) => {
+	if (cardCount > 12) {
+		cardCount = 0;
+	}
 	const card = document.getElementById(cardCount);
 	card.children[0].textContent = term;
 	localStorage.setItem(`card${cardCount}_term`, term);
@@ -156,6 +159,9 @@ const addToFrontCard = (term) => {
 	}
 };
 const addToBackCard = (definition) => {
+	if (cardCount > 12) {
+		cardCount = 0;
+	}
 	const card = document.getElementById(cardCount);
 	card.children[1].textContent = definition;
 	localStorage.setItem(`card${cardCount}_definition`, definition);
