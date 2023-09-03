@@ -4,8 +4,7 @@ const chatPage = document.querySelector(".chat-page");
 const clearCardsButton = document.getElementById("clear-Cards-Button");
 
 let userName = "User";
-const topicChoice = ["psychology", "Cybersecurity", "Computer Science"];
-const topicBotResponses = ["Psychology is it!", "Alright, just don't hack me!", "Computer what???"];
+
 const userInputs = [
 	["how are you", "how is life", "how are things", "what's up", "how's it going"], //0
 	["hi", "hey", "hello", "good morning", "good afternoon", "hey chad"], //1
@@ -74,7 +73,7 @@ const output = (input) => {
 	//adding the term for the front of the card
 	//Regex searchs for "add" then aggregates everything that follows
 
-	//term adding
+	//term adding regex, bot looks for word add
 	const termRegex = /add\s+(.+)/gi;
 	const termInput = input.replace(termRegex, (match, capturedText) => {
 		console.log("Captured Text:", capturedText);
@@ -102,6 +101,7 @@ const output = (input) => {
 	}
 };
 
+//regex to match cleaned value to the userInputs array
 const processInput = (input) => {
 	return input
 		.toLowerCase()
