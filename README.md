@@ -15,6 +15,6 @@ Currently both the game and the webapp are functional. Though there are features
 []Improve the chat bot's NLP ability. 
 []Improve the functionality of the chatbot, allowing users to ask for specific cards to be changed. 
 
-## Code Style
+Code Style
 -------------
 The HTML, CSS, and JavaScript are all standard modern notation and syntax. The VS Code extention _Prettier Code_-<https://prettier.io/> was used for formating.
