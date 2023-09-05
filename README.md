@@ -21,7 +21,7 @@ The HTML, CSS, and JavaScript are all standard modern notation and syntax. The V
 
 Approach
 --------
-1. Wireframe on paper of game board and flash card application application
+1. Wireframe on paper of game board and flash card webapp
 2. Research on how to implement different algorithms needed for projects
 3. built HTML skeleton based on wireframe
 4. Used CSS Grid and flexbox
