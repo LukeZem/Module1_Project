@@ -77,7 +77,7 @@ section {
 }
 
 #background {
-	background: linear-gradient(132deg, #c7b6b8, #a77eee, #212335);
+	background: linear-gradient(132deg, #c7b6b8, #a77eee, #289bfa);
 	background-size: 400% 400%;
 	animation: Gradient 15s ease infinite;
 	position: relative;
