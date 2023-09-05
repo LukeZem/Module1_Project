@@ -24,12 +24,21 @@ Tech/Framework used
 1. HTML
 2. CSS
 3. JavaScript       
-5. bootstrap 5 (on the homepage page only)
+5. bootstrap 5 (on the homepage navbar and modal only)
 
 Code Example
 -----------
 **Here is an example of usign RegEx for the chat bot's very limited but functional NLP**
-![image](https://github.com/LukeZem/Module1_Project/assets/102622914/a7a8a02b-862a-40c0-899a-cc7e9da2f3da)
+![image](https://github.com/LukeZem/Module1_Project/assets/102622914/a7a8a02b-862a-40c0-899a-cc7e9da2f3da) <br />
+
+**Here is an example of how the code works for checking if the snake has collided with the food**
+![image](https://github.com/LukeZem/Module1_Project/assets/102622914/56760236-1937-4c11-9a1b-cab2e1dda9b6) <br />
+
+**Here is an example of how the game checks for game over collision conditions** <br />
+Such as
+1. Htting the game board wall
+2. The snake hitting its own tail <br />
+![image](https://github.com/LukeZem/Module1_Project/assets/102622914/e75fb94c-df8f-4910-9a9f-86067b3980cc)
 
 Installation
 -----------
