@@ -10,10 +10,10 @@ Build Status - Improvements to come...
 --------------------------------------
 Currently both the game and the webapp are functional. Though there are features I will be adding in later. <br /> <br />
 **Classic Snake**: <br />
-[] Add difficulty settings that can be choosen with different high scores being saved for the different levels<br />
+[ ] Add difficulty settings that can be choosen with different high scores being saved for the different levels<br />
 **Flashy Flash Cards:** <br />
-[]Improve the chat bot's NLP ability. <br />
-[]Improve the functionality of the chatbot, allowing users to ask for specific cards to be changed. 
+[ ]Improve the chat bot's NLP ability. <br />
+[ ]Improve the functionality of the chatbot, allowing users to ask for specific cards to be changed. 
 
 Code Style
 -------------
