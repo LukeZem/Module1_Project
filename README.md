@@ -35,8 +35,8 @@ Installation
 -----------
 **Browser dependent**
 Go to this webpage [Module 1 Project](https://lukespage.com/MOD1_page.html)
-In the top right cornor of the page click the blue open button and select the game you'd like to play.
-Use the browser "back" arrow fucntionality to return to the homepage or click the link above again!
+1. In the top right cornor of the page click the blue open button and select the game you'd like to play.
+2. Use the browser "back" arrow fucntionality to return to the homepage or click the link above again!
 
 How To Use
 ---------
