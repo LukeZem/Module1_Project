@@ -17,7 +17,8 @@ body {
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
-	background: antiquewhite;
+	background: linear-gradient(132deg, #c7b6b8, #a77eee, #212335);
+	padding: 10px;
 }
 
 .wrapper {
@@ -27,6 +28,7 @@ body {
 	display: flex;
 	overflow: hidden;
 	flex-direction: column;
+	align-self: start;
 	border-radius: 5px;
 }
 
@@ -59,4 +61,9 @@ body {
 .game-board .snake-body {
 	background: blue;
 	border-radius: 98% !important;
+}
+
+#rules {
+	padding: 10px;
+	border: #293447 solid 1px;
 }

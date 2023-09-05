@@ -20,7 +20,7 @@ body {
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(4, 1fr);
 	gap: 5px;
-	background-color: antiquewhite;
+	background: linear-gradient(132deg, #c7b6b8, #a77eee, #212335);
 	padding: 20px;
 	min-height: 100vh;
 }
@@ -36,7 +36,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	grid-column: span 4;
-	background: darkolivegreen;
+	/* background: darkolivegreen; */
 }
 
 .gameOptions {
