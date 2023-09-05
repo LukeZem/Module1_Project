@@ -19,6 +19,14 @@ Code Style
 -------------
 The HTML, CSS, and JavaScript are all standard modern notation and syntax. The VS Code extention [_Prettier Code_](https://prettier.io/) was used for formating.
 
+Approach
+--------
+1. Wireframe on paper of game board and flash card application application
+2. Research on how to implement different algorithms needed for projects
+3. built HTML skeleton based on wireframe
+4. Used CSS Grid and flexbox
+5. Added styling iteratively as project went along
+
 Tech/Framework used
 -------------------
 1. HTML
