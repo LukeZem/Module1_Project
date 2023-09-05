@@ -200,4 +200,5 @@ clearCardsButton.addEventListener("click", () => {
 		card.children[0].textContent = "Term";
 		card.children[1].textContent = "Definition";
 	}
+	cardCount = 0;
 });
