@@ -57,7 +57,7 @@ Go to this webpage [Module 1 Project](https://lukespage.com/MOD1_page.html)
 
 How To Use
 ---------
-To start playing _Classic Snake_ simply press a direction on using your arrow keys
+To start playing _Classic Snake_ press a directional key on your keyboard
 
 For _Flashy Flash Cards_ start by reading the instructions on the page itself. 
 You interact with the chatbot to add terms and definitions to the cards which it will add iteratively, moving onto the next card when you've completed the previous one.
