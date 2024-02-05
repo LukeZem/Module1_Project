@@ -11,7 +11,7 @@ Build Status - Improvements to come...
 Currently both the game and the webapp are functional. Though there are features I will be adding in later. <br /> <br />
 **Classic Snake**: <br />
 [ ] Add difficulty settings that can be choosen with different high scores being saved for the different levels<br />
-[ ] Add keystroke queue so inputs are processed in order of FIFO
+[ ] Add keystroke queue so inputs are processed in order of FIFO<br />
 [ ] Add linear interpolation so make the snake move more smoothly<br />
 [ ] Improvements to the appearance of the game
 **Flashy Flash Cards:** <br />
